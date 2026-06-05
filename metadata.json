@@ -1,0 +1,6 @@
+{
+  "name": "Seeyam Portfolio",
+  "description": "A premium creative portfolio website for Seeyam, WordPress Developer and Creative Web Developer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
