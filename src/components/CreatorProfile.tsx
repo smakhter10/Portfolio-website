@@ -107,6 +107,9 @@ export default function CreatorProfile() {
             className="text-base sm:text-xl md:text-2xl lg:text-3xl leading-[1.4] font-mono tracking-tight font-light select-none text-[var(--text-color)] max-w-4xl"
           >
             {chars.map((char, index) => {
+              if (char === "\n") {
+                return <br key={index} />;
+              }
               if (char === " ") {
                 return <span key={index}> </span>;
               }

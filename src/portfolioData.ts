@@ -37,6 +37,7 @@ export interface ProjectItem {
   reelColor: string;
   accentText: string;
   image: string;
+  liveUrl?: string;
 }
 
 export interface ServiceItem {
@@ -74,7 +75,11 @@ export const portfolioData = {
     badgeLabel: "CREATOR SPECIFICATION",
     
     // Main paragraph that auto-decodes as you scroll:
-    bioText: "I am Seeyam, a creative web technologist specializing in bespoke WordPress architectures, custom system plugins, and high-performance React application layers. I build fast, semantic codebases integrated with tactile physical layouts, responsive forms, and smooth micro-interactive choreography. Synthesizing meticulous visual styling with clean engineering routines to formulate lasting, premium digital experiences for forward-thinking brands, design studios, and innovators.",
+    bioText: `I’m Seeyam, a creative web developer focused on building clean, responsive, and user-friendly websites. My work mostly revolves around WordPress, Elementor, WooCommerce, Shopify, and modern frontend tools like React.
+
+I’ve worked on different types of projects, from business websites and eCommerce stores to custom WordPress features, booking systems, bug fixes, and complete website redesigns. I enjoy turning messy ideas into simple, functional, and polished digital experiences.
+
+For me, a good website is not just about looking nice: it should load properly, work on every device, be easy to use, and help the client achieve their goal.`,
     
     // Flat editorial metrics printed below the decoder:
     profileMetrics: [
@@ -177,7 +182,8 @@ export const portfolioData = {
       textColor: "text-emerald-500",
       reelColor: "bg-emerald-950/40",
       accentText: "text-emerald-100",
-      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
+      liveUrl: "https://github.com/smakhter10"
     },
     {
       title: "Aura Editorial",
@@ -194,7 +200,8 @@ export const portfolioData = {
       textColor: "text-purple-400",
       reelColor: "bg-purple-950/40",
       accentText: "text-purple-100",
-      image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80",
+      liveUrl: "https://github.com/smakhter10"
     },
     {
       title: "Reserva Hospitality",
@@ -211,7 +218,8 @@ export const portfolioData = {
       textColor: "text-cyan-400",
       reelColor: "bg-cyan-950/40",
       accentText: "text-cyan-100",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
+      liveUrl: "https://github.com/smakhter10"
     },
     {
       title: "Dynamic Grid Forge",
@@ -228,7 +236,8 @@ export const portfolioData = {
       textColor: "text-amber-400",
       reelColor: "bg-amber-950/40",
       accentText: "text-amber-100",
-      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80",
+      liveUrl: "https://github.com/smakhter10"
     }
   ] as ProjectItem[],
 
@@ -293,5 +302,58 @@ export const portfolioData = {
     { label: "GitHub", url: "https://github.com/smakhter10" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/seeyam-akhter-692771266/" },
     { label: "Facebook", url: "https://www.facebook.com/" },
-  ]
+  ],
+
+  // --- RETRO BIOS FAQ TERMINAL DATA ---
+  faq: {
+    systemName: "SEEYAM CORE BIOS v1.02",
+    mainVolume: "DRIVE A: SYSTEM RAM OK - CACHE STABLE",
+    directoryLabel: "Directory of A:\\FAQ",
+    instructions: "Choose a file from the list or type 'cat [filename]' below to view database entries.",
+    promptPrefix: "A:\\FAQ>",
+    items: [
+      {
+        id: "01",
+        command: "cat Services.txt",
+        fileCode: "SERVICES.TXT",
+        question: "What services do you offer?",
+        answer: "I offer website design, WordPress development, website customization, bug fixing, responsive design, WooCommerce setup, and basic SEO optimization."
+      },
+      {
+        id: "02",
+        command: "cat Platform.txt",
+        fileCode: "PLATFORM.TXT",
+        question: "What platforms do you work with?",
+        answer: "I mainly work with WordPress, Elementor, WooCommerce, Shopify, and custom frontend technologies like HTML, CSS, JavaScript, React, and GSAP."
+      },
+      {
+        id: "03",
+        command: "cat Redesign.txt",
+        fileCode: "REDESIGN.TXT",
+        question: "Can you redesign my existing website?",
+        answer: "Yes. I can redesign your current website to make it look more modern, professional, responsive, and user-friendly while keeping your brand style in mind."
+      },
+      {
+        id: "04",
+        command: "cat Respons.txt",
+        fileCode: "RESPONS.TXT",
+        question: "Will my website be mobile-friendly?",
+        answer: "Yes. Every website I build is fully responsive and optimized for desktop, laptop, tablet, and mobile devices."
+      },
+      {
+        id: "05",
+        command: "cat Support.txt",
+        fileCode: "SUPPORT.TXT",
+        question: "Do you provide support after the website is completed?",
+        answer: "Yes. I provide support after project completion to help with small changes, guidance, bug fixes, and basic website maintenance."
+      },
+      {
+        id: "06",
+        command: "cat Timeline.txt",
+        fileCode: "TIMELINE.TXT",
+        question: "How long does it take to complete a website?",
+        answer: "The timeline depends on the project size and requirements. A basic website may take a few days, while larger or more customized websites may take longer."
+      }
+    ]
+  }
 };

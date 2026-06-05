@@ -73,104 +73,175 @@ export default function FloatingObjects() {
       ref={containerRef}
       className="absolute inset-0 pointer-events-none overflow-hidden select-none z-10 floating-object-container"
     >
-      {/* Dynamic elegant feathers, abstract leaves and luxury spheres as SVGs */}
+      {/* Dynamic and fully polished retro vector objects inspired by printed stamp elements */}
 
-      {/* Object 1: Premium Leaf / Feather */}
+      {/* Object 1: Giant Retro Orange Sparkle (4-pointed star, Image 1) */}
       <div
         ref={addToRefs}
-        className="absolute w-24 h-24 md:w-32 md:h-32 top-[18%] left-[8%] opacity-35"
+        className="absolute w-24 h-24 md:w-32 md:h-32 top-[15%] left-[6%] opacity-35"
         style={{ transformOrigin: "center" }}
       >
         <svg
           viewBox="0 0 100 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full stroke-[0.7] stroke-[var(--text-color)] stroke-dasharray-[2,4]"
+          className="w-full h-full"
+        >
+          {/* Drop shadow background */}
+          <path
+            d="M50 5 C50 32, 68 50, 95 50 C68 50, 50 68, 50 95 C50 68, 32 50, 5 50 C32 50, 50 32, 50 5 Z"
+            fill="var(--text-color)"
+            className="opacity-15"
+            transform="translate(4, 4)"
+          />
+          <path
+            d="M50 5 C50 32, 68 50, 95 50 C68 50, 50 68, 50 95 C50 68, 32 50, 5 50 C32 50, 50 32, 50 5 Z"
+            fill="#ea580c"
+            stroke="var(--text-color)"
+            strokeWidth="4"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M50 25 C50 38, 62 50, 75 50 C62 50, 50 62, 50 75 C50 62, 38 50, 25 50 C38 50, 50 38, 50 25 Z"
+            fill="var(--accent-color)"
+            className="opacity-30"
+          />
+        </svg>
+      </div>
+
+      {/* Object 2: Concentric Circle Dot (Image 2) */}
+      <div
+        ref={addToRefs}
+        className="absolute w-24 h-24 md:w-32 md:h-32 top-[60%] left-[10%] opacity-30"
+        style={{ transformOrigin: "center" }}
+      >
+        <svg
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full"
+        >
+          <circle cx="53" cy="53" r="40" fill="var(--text-color)" className="opacity-15" />
+          <circle cx="50" cy="50" r="40" stroke="var(--text-color)" strokeWidth="3.5" />
+          <circle cx="50" cy="50" r="28" stroke="var(--text-color)" strokeWidth="1.5" strokeDasharray="3 3" />
+          <circle cx="50" cy="50" r="16" fill="#e11d48" stroke="var(--text-color)" strokeWidth="3.5" />
+        </svg>
+      </div>
+
+      {/* Object 3: Hand-Drawn 5-Pointed Star (Image 3) */}
+      <div
+        ref={addToRefs}
+        className="absolute w-20 h-20 md:w-28 md:h-28 top-[20%] right-[8%] opacity-40"
+        style={{ transformOrigin: "center" }}
+      >
+        <svg
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full"
         >
           <path
-            d="M50 5 C50 5, 80 40, 80 65 C80 85, 65 95, 50 95 C35 95, 20 85, 20 65 C20 40, 50 5, 50 5 Z"
+            d="M50 5 L64 35 L96 38 L72 61 L79 93 L50 77 L21 93 L28 61 L4 38 L36 35 Z"
+            fill="var(--text-color)"
+            className="opacity-15"
+            transform="translate(4, 4)"
+          />
+          <path
+            d="M50 5 L64 35 L96 38 L72 61 L79 93 L50 77 L21 93 L28 61 L4 38 L36 35 Z"
+            fill="var(--accent-color)"
+            stroke="var(--text-color)"
+            strokeWidth="4"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M50 20 L57 37 L75 39 L62 52 L66 70 L50 61 L34 70 L38 52 L25 39 L43 37 Z"
+            stroke="var(--text-color)"
+            strokeWidth="1.5"
+            strokeDasharray="2 2"
             fill="none"
           />
-          <path d="M50 5 L50 95" strokeDasharray="3 3" />
-          <path d="M50 35 Q65 42, 72 45" />
-          <path d="M50 45 Q35 52, 28 55" />
-          <path d="M50 55 Q68 62, 76 65" />
-          <path d="M50 65 Q32 72, 24 75" />
         </svg>
       </div>
 
-      {/* Object 2: Orbital Rings */}
+      {/* Object 4: Parallel Retro Wavy Squiggles (Image 4) */}
       <div
         ref={addToRefs}
-        className="absolute w-28 h-28 md:w-40 md:h-40 top-[60%] left-[12%] opacity-25"
+        className="absolute w-28 h-18 md:w-40 md:h-24 top-[68%] right-[6%] opacity-35"
+        style={{ transformOrigin: "center" }}
+      >
+        <svg
+          viewBox="0 0 120 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full"
+        >
+          {/* Thick black outline underneath, bright retro color on top */}
+          <path
+            d="M10 20 C25 2, 40 2, 55 20 C70 38, 85 38, 100 20 C108 11, 114 11, 120 20"
+            stroke="var(--text-color)"
+            strokeWidth="7"
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 20 C25 2, 40 2, 55 20 C70 38, 85 38, 100 20 C108 11, 114 11, 120 20"
+            stroke="#ea580c"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+          />
+          
+          <path
+            d="M10 40 C25 22, 40 22, 55 40 C70 58, 85 58, 100 40 C108 31, 114 31, 120 40"
+            stroke="var(--text-color)"
+            strokeWidth="7"
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 40 C25 22, 40 22, 55 40 C70 58, 85 58, 100 40 C108 31, 114 31, 120 40"
+            stroke="#fb923c"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+
+      {/* Object 5: Mid-screen Retro Star Target Ring Combo */}
+      <div
+        ref={addToRefs}
+        className="absolute w-14 h-14 md:w-18 md:h-18 top-[45%] left-[45%] opacity-25"
         style={{ transformOrigin: "center" }}
       >
         <svg
           viewBox="0 0 100 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full stroke-[0.5] stroke-[var(--text-color)]"
+          className="w-full h-full"
         >
-          <circle cx="50" cy="50" r="40" />
-          <ellipse cx="50" cy="50" rx="40" ry="12" transform="rotate(-30 50 50)" />
-          <ellipse cx="50" cy="50" rx="40" ry="12" transform="rotate(45 50 50)" />
-          <circle cx="50" cy="50" r="3" fill="var(--text-color)" />
+          <path
+            d="M50 15 C50 35, 35 50, 15 50 C35 50, 50 65, 50 85 C50 65, 65 50, 85 50 C65 50, 50 35, 50 15 Z"
+            fill="#ea580c"
+            stroke="var(--text-color)"
+            strokeWidth="4"
+          />
+          <circle cx="50" cy="50" r="10" fill="var(--accent-color)" stroke="var(--text-color)" strokeWidth="2.5" />
         </svg>
       </div>
 
-      {/* Object 3: Premium Abstract Asterisk / Floral */}
+      {/* Object 6: Deeper Target Crossair Compass Reticle */}
       <div
         ref={addToRefs}
-        className="absolute w-20 h-20 md:w-28 md:h-28 top-[22%] right-[10%] opacity-40"
+        className="absolute w-20 h-20 md:w-24 md:h-24 top-[85%] left-[35%] opacity-[0.16]"
         style={{ transformOrigin: "center" }}
       >
         <svg
           viewBox="0 0 100 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full stroke-[0.8] stroke-[var(--text-color)]"
+          className="w-full h-full"
         >
-          <path d="M50 10 L50 90 M10 50 L90 50 M22 22 L78 78 M22 78 L78 22" />
-          <circle cx="50" cy="50" r="8" fill="var(--bg-color)" className="stroke-[0.8] stroke-[var(--text-color)]" />
-          <circle cx="50" cy="10" r="2" fill="var(--text-color)" />
-          <circle cx="50" cy="90" r="2" fill="var(--text-color)" />
-          <circle cx="10" cy="50" r="2" fill="var(--text-color)" />
-          <circle cx="90" cy="50" r="2" fill="var(--text-color)" />
-        </svg>
-      </div>
-
-      {/* Object 4: Organic Wave Contour */}
-      <div
-        ref={addToRefs}
-        className="absolute w-32 h-32 md:w-44 md:h-44 top-[65%] right-[8%] opacity-30"
-        style={{ transformOrigin: "center" }}
-      >
-        <svg
-          viewBox="0 0 120 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full stroke-[0.6] stroke-[var(--text-color)]"
-        >
-          <path d="M10 60 C30 20, 90 20, 110 60 C110 60, 110 60, 110 60 C90 100, 30 100, 10 60 Z" />
-          <path d="M25 60 C40 35, 80 35, 95 60 C95 60, 95 60, 95 60 C80 85, 40 85, 25 60 Z" />
-          <path d="M40 60 C50 45, 70 45, 80 60 C80 60, 80 60, 80 60 C70 75, 50 75, 40 60 Z" />
-          <circle cx="60" cy="60" r="5" fill="var(--text-color)" />
-        </svg>
-      </div>
-
-      {/* Object 5: Minimal Star Burst Center Top Left Extra */}
-      <div
-        ref={addToRefs}
-        className="absolute w-12 h-12 md:w-16 md:h-16 top-[48%] left-[45%] opacity-[0.18]"
-        style={{ transformOrigin: "center" }}
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full text-[var(--text-color)]"
-        >
-          <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z" />
+          <circle cx="50" cy="50" r="32" stroke="var(--text-color)" strokeWidth="3" strokeDasharray="5 5" />
+          <line x1="50" y1="5" x2="50" y2="95" stroke="var(--text-color)" strokeWidth="2.5" />
+          <line x1="5" y1="50" x2="95" y2="50" stroke="var(--text-color)" strokeWidth="2.5" />
+          <circle cx="50" cy="50" r="14" fill="#e11d48" stroke="var(--text-color)" strokeWidth="2.5" />
         </svg>
       </div>
     </div>

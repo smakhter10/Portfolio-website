@@ -8,8 +8,10 @@ import FloatingObjects from "./components/FloatingObjects.tsx";
 import About from "./components/About.tsx";
 import Work from "./components/Work.tsx";
 import Services from "./components/Services.tsx";
+import FAQ from "./components/FAQ.tsx";
 import Contact from "./components/Contact.tsx";
 import Preloader from "./components/Preloader.tsx";
+import CaseStudies from "./components/CaseStudies.tsx";
 
 import "./styles/global.css";
 import "./styles/responsive.css";
@@ -165,8 +167,14 @@ export default function App() {
         {/* Section 2: Portfolio / Works */}
         <Work />
 
+        {/* Section: Retro Project Case Studies Archive */}
+        <CaseStudies />
+
         {/* Section 3: Services & Abilities */}
         <Services />
+
+        {/* Section: Retro FAQ Terminal */}
+        <FAQ />
 
         {/* Section 4: Contact Core Form */}
         <Contact

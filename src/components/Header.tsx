@@ -109,7 +109,7 @@ export default function Header({ onHoverStart, onHoverEnd }: HeaderProps) {
           <Menu size={16} className="stroke-[2.5]" />
         </button>
 
-        {/* Top Right Navigation: Projects, Contact (hidden in mobile) */}
+        {/* Top Right Navigation: Projects, FAQ, Contact (hidden in mobile) */}
         <nav className="hidden md:flex items-center space-x-6 md:space-x-10 text-xs font-semibold tracking-widest uppercase font-mono-editorial">
           <button
             onClick={() => handleScrollTo("work-section")}
@@ -118,6 +118,15 @@ export default function Header({ onHoverStart, onHoverEnd }: HeaderProps) {
             className="relative group py-1 text-[var(--text-color)] opacity-75 hover:opacity-100 transition-opacity cursor-none"
           >
             Projects
+            <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[var(--text-color)] transition-all duration-300 group-hover:w-full" />
+          </button>
+          <button
+            onClick={() => handleScrollTo("faq-section")}
+            onMouseEnter={() => onHoverStart?.("magnetic")}
+            onMouseLeave={onHoverEnd}
+            className="relative group py-1 text-[var(--text-color)] opacity-75 hover:opacity-100 transition-opacity cursor-none"
+          >
+            FAQ
             <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[var(--text-color)] transition-all duration-300 group-hover:w-full" />
           </button>
           <button
@@ -189,7 +198,8 @@ export default function Header({ onHoverStart, onHoverEnd }: HeaderProps) {
                 {[
                   { label: "SELECTED WORK", target: "work-section", sub: "STORY 01" },
                   { label: "ARTIST PROFILE", target: "about-section", sub: "METRIC 02" },
-                  { label: "CONTACT DESK", target: "contact-section", sub: "TRANSMIT 03" }
+                  { label: "BIOS CONSOLE / FAQ", target: "faq-section", sub: "TERMINAL 03" },
+                  { label: "CONTACT DESK", target: "contact-section", sub: "TRANSMIT 04" }
                 ].map((item, index) => (
                   <motion.button
                     key={index}
@@ -226,7 +236,7 @@ export default function Header({ onHoverStart, onHoverEnd }: HeaderProps) {
       </AnimatePresence>
 
       {/* Standalone Theme Slider: Sticky, floating at the bottom in mobile and top in desktop with a gorgeous 3D comic-style drop shadow */}
-      <div className="fixed bottom-6 md:top-6 md:bottom-auto left-1/2 -translate-x-1/2 z-50 select-none group/slider">
+      <div id="theme-slider-floating" className="fixed bottom-6 md:top-6 md:bottom-auto left-1/2 -translate-x-1/2 z-50 select-none group/slider">
         {/* Solid Black Underlay Shadow Pill (Inspiration from user's attachment) */}
         <div className="absolute inset-0 bg-black rounded-full translate-y-[4px] translate-x-[3px] md:translate-y-[6px] md:translate-x-[4px] w-full h-8 md:h-10 -z-10" />
 

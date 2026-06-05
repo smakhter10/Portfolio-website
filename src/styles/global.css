@@ -11,11 +11,14 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
-  /* Additional alternative themes in comments as requested, plus implemented dynamically:
-   * Dark luxury: background: #111111, text: #f3f3f3, accent: #d4af37
-   * Cream editorial: background: #f9f6f0, text: #242424, accent: #7a6245
-   * Blue experimental: background: #0f172a, text: #f1f5f9, accent: #3b82f6
-   */
+  /* Archive Theme Variables for Light Theme */
+  --archive-bg: #fcfcf9;
+  --archive-text: #121212;
+  --archive-border: #121212;
+  --archive-badge-bg: #f3f1ec;
+  --archive-badge-text: #121212;
+  --archive-badge-border: #d1d5db;
+  --archive-crt-opacity: 0.15;
 }
 
 /* Cream Editorial Mode */
@@ -24,6 +27,15 @@
   --text-color: #242424;
   --accent-color: #7a6245;
   --accent-glow: rgba(122, 98, 69, 0.2);
+
+  /* Archive Theme Variables for Cream Theme */
+  --archive-bg: #fdfdfc;
+  --archive-text: #242424;
+  --archive-border: #242424;
+  --archive-badge-bg: #f4ede2;
+  --archive-badge-text: #7a6245;
+  --archive-badge-border: #e4dcd0;
+  --archive-crt-opacity: 0.08;
 }
 
 /* Dark Luxury Mode */
@@ -32,6 +44,15 @@
   --text-color: #f3f3f3;
   --accent-color: #d4af37;
   --accent-glow: rgba(212, 175, 55, 0.2);
+
+  /* Archive Theme Variables for Dark Theme */
+  --archive-bg: #141316;
+  --archive-text: #f3f3f3;
+  --archive-border: #d4af37;
+  --archive-badge-bg: #221a0f;
+  --archive-badge-text: #d4af37;
+  --archive-badge-border: rgba(255, 223, 122, 0.25);
+  --archive-crt-opacity: 0.22;
 }
 
 /* Blue Experimental Mode */
@@ -40,6 +61,15 @@
   --text-color: #f1f5f9;
   --accent-color: #3b82f6;
   --accent-glow: rgba(59, 130, 246, 0.2);
+
+  /* Archive Theme Variables for Blue Theme */
+  --archive-bg: #0b0f19;
+  --archive-text: #f1f5f9;
+  --archive-border: #3b82f6;
+  --archive-badge-bg: #172554;
+  --archive-badge-text: #60a5fa;
+  --archive-badge-border: #1e3a8a;
+  --archive-crt-opacity: 0.22;
 }
 
 /* Base resets & variables bindings */
@@ -227,5 +257,36 @@ body::before {
 .group:hover .tape-hub-spin,
 .cassette-active .tape-hub-spin {
   animation-play-state: running;
+}
+
+/* Custom CRT Scanline & Monitor flickering animations for the FAQ terminal */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+}
+
+@keyframes crt-flicker-anim {
+  0% { opacity: 0.02; }
+  50% { opacity: 0.04; }
+  100% { opacity: 0.02; }
+}
+
+.crt-flicker {
+  animation: crt-flicker-anim 0.15s infinite ease-in-out;
+}
+
+/* Custom modal state modifiers to prevent layout interference */
+body.modal-open {
+  overflow: hidden !important;
+}
+
+body.modal-open #theme-slider-floating,
+body.modal-open #portfolio-header {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
